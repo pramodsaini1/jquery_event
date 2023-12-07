@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Example</title>
+        <style>
+            .ans{
+                display:none;
+            }
+        </style>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("button").click(function(){
+                        var v=$(this).attr("id");
+                        var r=$(this).text();
+                        if(r=="+"){
+                            $(this).text("-");
+                        }
+                        else{
+                            $(this).text("+");
+                        }
+                        $("#ans-"+v).toggle(1000);
+                    })
+                })
+            </script>
+        
+    </head>
+    <body>
+        <div>Difference between Array and String?<button id="1">+</button></div>
+        <div id="ans-1" class="ans"><b>Answer:</b>
+        <p>
+            <br>
+             wklejdiewjd lekwjdew dmndwke dwendewd dkwndw dkendew welkdkewndw djewkndew dewkjdnew dewkjdnew ewjkndew dewkjdnmew dewkjndew djkewndew d wekndew dkewndew d
+            <br>
+        </p></div>
+</html>
