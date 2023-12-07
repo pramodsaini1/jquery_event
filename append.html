@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Example</title>
+        <style>
+            .ans{
+                display:none;
+            }
+        </style>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("input").keyup(function(){
+                        var text=$(this).val();
+                        $("#msg").append(text);
+                    })
+                })
+            </script>
+        
+    </head>
+    <body>
+         <input type="text">
+         <div id="msg"></div>
+         <h1>pkk</h1>
+</html>
