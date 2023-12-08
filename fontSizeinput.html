@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Example</title>
+        <style>
+            .ans{
+                display:none;
+            }
+        </style>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("input").keyup(function(){
+                        var f=$("#first").val();
+                        var s=$("#second").val();
+                        var msg=$(this).val();
+                        $(".dem").css("background-color",f);
+                        $(".dem").css("color",s);
+                        $(".dem").html(msg);
+
+                    });
+                    $("button").click(function(){
+                       var size=$(this).attr("id");
+                       $(".dem").css("font-size",size);
+                       var next=parseInt(size)+1;
+                       alert(next);
+                       $(this).attr("id",next);
+                    });
+                });
+            </script>
+        
+    </head>
+    <body>
+        <button id="plus">+</button>
+         <input type="text" id="first"><br><br>
+         <input type="text" id="second"><br><br>
+         <textarea rows="3" cols="3" id="msg"></textarea><br><br>
+         <div class="dem"></div>
+         
+</html>
