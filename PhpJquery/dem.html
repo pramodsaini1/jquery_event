@@ -43,6 +43,19 @@
 					 
 					 
 				 });
+         $(document).on("click",".fa.fa-edit",function(){
+					 var roll=$(this).attr("id");
+					  
+					 $.post(
+					   "edit.php",{roll:roll},function(data){
+						   $("#r"+roll).html(data);
+						    
+					   }
+					 )
+					 
+					 
+					 
+				 });
             </script>
         
     </head>
