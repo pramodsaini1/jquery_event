@@ -29,6 +29,20 @@
                         )
                     })
                  })
+                 $(document).on("click",".fa.fa-trash-o",function(){
+					 var roll=$(this).attr("id");
+					  $.post(
+					    "delete.php",{roll:roll},function(data){
+ 							if(data.trim()=="success"){
+								$("#r"+roll).fadeOut(1000);
+							}
+							
+						}
+					  
+					  )
+					 
+					 
+				 });
             </script>
         
     </head>
